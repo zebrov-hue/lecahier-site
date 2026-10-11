@@ -1,0 +1,8 @@
+
+# LC-CACHE : les pages HTML sont revérifiées à chaque visite (pas d'ancienne version affichée)
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|php)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
+# /LC-CACHE
