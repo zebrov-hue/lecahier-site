@@ -1,0 +1,6 @@
+
+# LC-CACHE2 : pas de copie gardée en mémoire par le serveur (LiteSpeed) pour ce site
+<IfModule LiteSpeed>
+  CacheDisable public /
+</IfModule>
+# /LC-CACHE2
