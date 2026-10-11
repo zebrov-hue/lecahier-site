@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4f7fc">
+<meta name="description" content="Le Cahier: short daily practice that follows what your child learns in class. For elementary school in Quebec.">
+<title>Le Cahier</title>
+<link rel="alternate" hreflang="fr-CA" href="https://lecahier.ca/">
+<link rel="alternate" hreflang="en-CA" href="https://lecahier.ca/en/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Grandstander:wght@500;700;800&display=swap">
+<style>
+:root{
+  --paper:#f4f7fc;--grid:#dbe5f3;--card:#ffffff;--rule:#e3ebf7;
+  --ink:#1b2a4a;--ink-2:#53627f;--ink-3:#7784a0;
+  --blue:#2a62c9;--blue-soft:#e5eefc;--margin:#d8443a;--warn:#fbf1d8;--warn-ink:#6b4e00;
+  --display:"Grandstander","Comic Sans MS",system-ui,sans-serif;
+  --body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:14px;
+}
+@media (prefers-color-scheme:dark){:root{
+  --paper:#0f1522;--grid:#1a2336;--card:#171f31;--rule:#1f2a40;
+  --ink:#e7edf8;--ink-2:#a8b4cc;--ink-3:#8592ab;
+  --blue:#7ea6ff;--blue-soft:#1d2a47;--margin:#ef6f63;--warn:#33290f;--warn-ink:#e8b84a;
+}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:18px/1.65 var(--body);color:var(--ink);background-color:var(--paper);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:32px 32px;-webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+.wrap{width:min(860px,calc(100% - 32px));margin:0 auto}
+
+/* en-tête */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0 14px}
+.lc{font-family:var(--display);font-weight:800;color:var(--ink);white-space:nowrap}
+.btn .lc,.brand .lc{color:inherit}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:800 1.4rem var(--display)}
+.brand i{width:30px;height:36px;border:2.5px solid var(--blue);border-radius:6px;position:relative;background:var(--card);flex:none}
+.brand i::before{content:"";position:absolute;left:7px;top:0;bottom:0;width:2px;background:var(--margin)}
+.top nav{display:flex;align-items:center;gap:20px;font-size:.95rem}
+.top nav a{color:var(--ink-2);text-decoration:none}
+.top nav a:hover{color:var(--blue)}
+.top nav a.btn{color:#fff;min-height:42px;padding:6px 16px;font-size:.95rem}
+.top nav a.btn:hover{color:#fff}
+@media (prefers-color-scheme:dark){.top nav a.btn,.top nav a.btn:hover{color:#0f1522}}
+.top nav{align-items:center}
+.chips{display:flex;gap:8px 10px;flex-wrap:wrap;margin-top:20px;padding:0;list-style:none}
+.page ul.chips{padding-left:0;margin:20px 0 0}
+.page .chips li{margin:0;font-size:.9rem;color:var(--ink-2);background:var(--blue-soft);border-radius:999px;padding:4px 12px}
+.who{display:grid;grid-template-columns:1fr;gap:6px}
+.already{margin-top:18px;padding-top:16px;border-top:1px solid var(--rule);font-size:.98rem;color:var(--ink-2)}
+.already{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.already .btn{margin:0;min-height:42px;padding:6px 16px;font-size:.95rem}
+
+/* page quadrillée avec marge rouge, comme dans l'appli */
+.page{position:relative;background:var(--card);border-radius:var(--r);padding:34px 36px 34px 72px;margin:0 0 22px;
+  box-shadow:0 1px 0 var(--grid),0 12px 28px -20px rgba(20,40,80,.4)}
+.page::before{content:"";position:absolute;left:44px;top:0;bottom:0;width:2px;background:var(--margin);opacity:.8}
+p,li,summary{text-wrap:pretty}
+h1,h2,h3{text-wrap:balance}
+sup{font-size:.7em;line-height:0;vertical-align:super}
+
+h1,h2,h3{font-family:var(--display);color:var(--ink);margin:0}
+h1{font-weight:800;font-size:clamp(2rem,5.4vw,3rem);line-height:1.12;letter-spacing:-.01em}
+h2{font-weight:800;font-size:clamp(1.55rem,3.6vw,2.05rem);line-height:1.2;margin-bottom:12px}
+h3{font-weight:700;font-size:1.15rem;line-height:1.3;margin-bottom:6px}
+p{margin:0 0 14px}
+.eyebrow{font:700 .85rem var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.lead{font-size:1.15rem;color:var(--ink-2);max-width:34em}
+.fine{font-size:.9rem;color:var(--ink-3);margin-top:18px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 22px;border-radius:12px;
+  background:var(--blue);color:#fff;text-decoration:none;border:2px solid var(--blue);font:700 1.05rem var(--display);cursor:pointer}
+.btn:hover{filter:brightness(1.07)}
+.btn.ghost{background:transparent;color:var(--blue)}
+@media (prefers-color-scheme:dark){.btn{color:#0f1522}.btn.ghost{color:var(--blue)}}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+
+/* exemple d'écran parent */
+.sample{margin-top:28px;border:1.5px dashed var(--grid);border-radius:12px;padding:16px 18px;background:var(--card);max-width:30em}
+.sample small{display:block;font:700 .75rem var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
+.sample .row{display:flex;gap:10px;align-items:baseline;padding:6px 0;border-top:1px solid var(--rule)}
+.sample .row:first-of-type{border-top:0}
+.tick{color:var(--blue);font-weight:700}
+.sample .calm{font-family:var(--display);font-weight:700}
+.sample em{display:block;font-size:.82rem;color:var(--ink-3);font-style:normal;margin-top:8px}
+
+/* étapes et principes */
+.steps,.cols{display:grid;gap:16px;margin-top:20px}
+.steps.four{grid-template-columns:repeat(2,minmax(0,1fr))}
+.steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cols{grid-template-columns:repeat(3,minmax(0,1fr))}
+.step,.col{border:1.5px solid var(--grid);border-radius:12px;padding:16px 16px 6px;background:var(--card)}
+.step .n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--blue-soft);color:var(--blue);font:800 1rem var(--display);margin-bottom:10px}
+.step p,.col p{font-size:.98rem;color:var(--ink-2)}
+.how{margin-top:34px}
+.how .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+.col{border-top:3px solid var(--blue)}
+
+/* pilote */
+.pill{display:inline-block;background:var(--blue-soft);color:var(--blue);font:700 .85rem var(--body);padding:4px 12px;border-radius:999px;margin-bottom:12px}
+.page ul{margin:8px 0 16px;padding-left:1.2em}
+.page li{margin:6px 0}
+
+/* faq */
+details{border-top:1px solid var(--rule);padding:14px 0}
+details:first-of-type{border-top:0}
+summary{cursor:pointer;font:700 1.08rem var(--display);list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--blue);font-size:1.5rem;line-height:1}
+details[open] summary::after{content:"−"}
+details p{margin:10px 0 0;color:var(--ink-2);font-size:1rem}
+
+/* formulaire */
+.field{margin-bottom:16px}
+label{display:block;font-weight:700;font-size:.95rem;margin-bottom:6px}
+input[type=text],input[type=email],select{width:100%;min-height:48px;padding:10px 14px;font:1rem var(--body);color:var(--ink);
+  background:var(--paper);border:2px solid var(--grid);border-radius:10px}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:.92rem;color:var(--ink-2);margin:18px 0}
+.consent input{width:22px;height:22px;margin-top:2px;accent-color:var(--blue);flex:none}
+.hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+.status{display:none;margin-top:14px;padding:12px 14px;border-radius:10px;background:var(--blue-soft);font-weight:700}
+.status.err{background:var(--warn);color:var(--warn-ink)}
+.form-note{font-size:.88rem;color:var(--ink-3);margin-top:12px}
+
+/* confidentialité */
+.priv h3{font-size:1rem;margin:20px 0 4px}
+.priv p{font-size:.97rem;color:var(--ink-2)}
+
+/* mémos de travail : retirer class="draft" du <body> avant la mise en ligne */
+.todo{display:none;background:var(--warn);color:var(--warn-ink);border-radius:10px;padding:10px 14px;font-size:.9rem;margin:14px 0}
+body.draft .todo{display:block}
+body.draft .ph{background:var(--warn);color:var(--warn-ink);padding:0 4px;border-radius:4px}
+
+footer{padding:10px 0 48px;font-size:.9rem;color:var(--ink-3);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--ink-3)}
+.top nav a.lang{font-weight:700;letter-spacing:.04em}
+.soc{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--grid);background:var(--card);color:var(--blue);text-decoration:none}
+.soc:hover{border-color:var(--blue)}
+.socs{display:flex;gap:10px;align-items:center}
+.who .socs{margin-top:6px}
+footer .soc{width:36px;height:36px;color:var(--ink-3)}
+
+.week{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:18px}
+.week .step h3{margin-top:0}
+.cols.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:720px){
+  body{font-size:17px}
+  .page{padding:26px 18px 26px 54px}
+  .page::before{left:30px}
+  .steps,.steps.four,.cols,.cols.two,.week,.how .steps{grid-template-columns:1fr}
+  .top nav a:not(.keep){display:none}
+  .top nav{gap:8px}
+  .top .soc{width:34px;height:34px}
+  .top nav a.btn{padding:6px 12px;font-size:.9rem}
+  .brand{font-size:1.1rem;gap:7px;white-space:nowrap}
+  .top nav a.btn{white-space:nowrap}
+  .top .socs{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.cb{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:640px;margin:0 auto;background:var(--card);color:var(--ink);border:1.5px solid var(--grid);border-radius:14px;padding:16px 18px;box-shadow:0 8px 28px rgba(27,42,74,.18)}
+.cb p{margin:0 0 12px;font-size:.95rem;line-height:1.5}
+.cb .row{display:flex;gap:10px;flex-wrap:wrap}
+.cb button{flex:1 1 140px;min-height:44px;padding:8px 16px;font:700 .98rem var(--body,inherit);color:var(--blue);background:var(--card);border:2px solid var(--blue);border-radius:10px;cursor:pointer}
+.cb button:hover{background:var(--blue-soft)}
+.linkbtn{background:none;border:0;padding:0;font:inherit;color:var(--blue);text-decoration:underline;cursor:pointer}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#accueil" aria-label="Le Cahier, home"><i aria-hidden="true"></i>Le Cahier</a>
+    <nav aria-label="Main navigation">
+      <a href="#fonctionnement">How it works</a>
+      <a href="#donnees">Your data</a>
+      <a href="#qui">Who am I?</a>
+      <a class="keep lang" href="/" hreflang="fr" lang="fr">FR</a>
+      <span class="socs keep"><a class="soc keep" href="https://www.instagram.com/lecahier.ca/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="soc keep" href="https://www.facebook.com/lecahier.ca" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg></a></span>
+      <a class="btn keep" href="https://app.lecahier.ca/">Open Le Cahier</a>
+    </nav>
+  </header>
+
+  <main id="accueil">
+
+    <section class="page lined" aria-labelledby="t-accueil">
+      <p class="eyebrow">A parent’s project</p>
+      <h1 id="t-accueil">Practice at home what your child learns in class.</h1>
+      <p class="lead" style="margin-top:18px">Every day, your child does a short exercise session: math, dictation, reading, writing, science, social studies.</p>
+      <p class="lead">Each week, you show the class work plan. <span class="lc">Le Cahier</span> picks exercises based on what is being taught, the upcoming dictations and tests, then adapts to your child’s answers: what was mastered isn’t repeated, what was missed comes back.</p>
+      <div class="actions">
+        <a class="btn" href="#inscription">I’d like to try Le Cahier</a>
+        <a class="btn ghost" href="#semaine">See an example week</a>
+      </div>
+    </section>
+
+    <section class="page" id="semaine" aria-labelledby="t-sem">
+      <h2 id="t-sem">An example week</h2>
+      <p>Class plan: math test on Thursday, dictation on Friday. Here is what <span class="lc">Le Cahier</span> prepares.</p>
+      <div class="week">
+        <article class="step"><h3>Monday</h3><p>Questions on fractions (test Thursday). Dictation words.</p></article>
+        <article class="step"><h3>Tuesday</h3><p>One full math problem. Dictation words.</p></article>
+        <article class="step"><h3>Wednesday</h3><p>Calculation sheet. Questions on fractions. A concept missed the day before comes back, with its explanation.</p></article>
+        <article class="step"><h3>Thursday</h3><p>Practice dictation. Last questions on fractions.</p></article>
+        <article class="step"><h3>Friday</h3><p>Dictation in class. Short session, a look back at the week.</p></article>
+      </div>
+    </section>
+
+    <section class="page" id="fonctionnement" aria-labelledby="t-fonc">
+      <h2 id="t-fonc">How does it work?</h2>
+      <div class="steps four">
+        <article class="step"><span class="n">1</span><h3>You create the account</h3><p>An email and a password. For your child, just a first name.</p></article>
+        <article class="step"><span class="n">2</span><h3>You show the class plan</h3><p>Each week, you add the work plan the school sends you: a photo or a screenshot is enough.</p></article>
+        <article class="step"><span class="n">3</span><h3>Your child does the session</h3><p>One button: “Ma séance du jour” (today’s session). It is shorter on busy weeks, longer before a test. On weekends, nothing is required.</p></article>
+        <article class="step"><span class="n">4</span><h3>You follow their progress</h3><p>Most days: “Nothing to do on your side today.” A first picture by subject appears after about ten days.</p></article>
+      </div>
+      <div class="actions"><a class="btn" href="#inscription">I’d like to try Le Cahier</a></div>
+    </section>
+
+    <section class="page" aria-labelledby="t-diff">
+      <h2 id="t-diff">What sets it apart, and what it isn’t</h2>
+      <div class="cols two">
+        <article class="col"><h3>What sets it apart</h3>
+          <p>Exercises built from the official curriculum of Quebec’s Ministère de l’Éducation, then matched to your child’s class: work plan, dictations, tests.</p>
+          <p>After a mistake: an explanation, then the concept comes back at spaced intervals.</p>
+          <p>No points, no rankings, no streak to maintain.</p></article>
+        <article class="col"><h3>What it isn’t</h3>
+          <p>A tutor, or a replacement for the teacher.</p>
+          <p>A homework planner: these are exercises on top of homework.</p>
+          <p>One more app to keep an eye on: no notifications, nothing to follow up.</p></article>
+      </div>
+    </section>
+
+    <section class="page" id="donnees" aria-labelledby="t-don">
+      <h2 id="t-don">Your data</h2>
+      <p>Only the parent sees the child’s answers, texts, interests and first name.</p>
+      <div class="steps four">
+        <article class="step"><span class="n">1</span><h3>On your device</h3><p>Personal content is encrypted in your browser before it is sent.</p></article>
+        <article class="step"><span class="n">2</span><h3>In the database, in Montréal</h3><p>I don’t have access to it and I can’t read it, even if I’m asked to.</p></article>
+              </div>
+      <p style="margin-top:16px">No ads, no selling of data. The app’s privacy policy gives the details, and you can read it before creating an account.</p>
+    </section>
+
+    <section class="page" id="qui" aria-labelledby="t-qui">
+      <h2 id="t-qui">Who am I?</h2>
+      <div class="who">
+        <p>My name is Najm, I’m a dad and I live in Montréal. I built <span class="lc">Le Cahier</span> for my own child: I wanted to help them practice without every evening turning into a second homework session. Then I wanted to share it with other families.</p>
+        <p>I keep improving it with the parents who use it, and I read every message myself. A question? <a href="mailto:najm@lecahier.ca">najm@lecahier.ca</a></p>
+        <p class="socs"><a class="soc" href="https://www.instagram.com/lecahier.ca/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="soc" href="https://www.facebook.com/lecahier.ca" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg></a><span>Follow Le Cahier on Instagram and Facebook.</span></p>
+      </div>
+    </section>
+
+    <section class="page" aria-labelledby="t-faq">
+      <h2 id="t-faq">Your questions</h2>
+      <details><summary>How much time should I plan for?</summary><p>A session is short. It is even shorter on busy weeks, a little longer before a test, and some days there is nothing to do.</p></details>
+      <details><summary>What is the class work plan for?</summary><p>It is what aligns <span class="lc">Le Cahier</span> with the school: what is taught this week, the dictations, the upcoming tests. Without it, <span class="lc">Le Cahier</span> still works from your child’s answers, but it doesn’t know what the class is working on.</p></details>
+      <details><summary>Does it follow the school curriculum?</summary><p>Yes. The exercises are built from the official curriculum of the Ministère de l’Éducation, and the class plan matches them to your child’s week.</p></details>
+      <details><summary>Can I stop whenever I want?</summary><p>Yes. You can delete your child’s cahier or your account, and everything attached to it is erased.</p></details>
+      <details><summary>Is it free?</summary><p>Yes, during the trial phase.</p></details>
+      <details><summary>Can I start right away?</summary><p>Yes, as soon as you receive your access link. Leave me your details: I’ll send it with the next steps.</p></details>
+    </section>
+
+    <section class="page lined" id="inscription" aria-labelledby="t-insc">
+      <span class="pill">Free during the trial phase</span>
+      <h2 id="t-insc">So, shall we open <span class="lc">Le Cahier</span>?</h2>
+      <p>I’m opening <span class="lc">Le Cahier</span> to a small number of families first, and adjusting it with them.</p>
+      <p><strong>How it works</strong></p>
+      <ul>
+        <li>I email you an invitation to open the account.</li>
+        <li>Your child starts as soon as you receive your link. You tell me what works and what we can improve.</li>
+        <li>It’s free during the trial phase, and you can stop whenever you want.</li>
+      </ul>
+      <p>Leave me your details and I’ll write to explain the next steps. It doesn’t commit you to anything. I don’t ask for your child’s name, school or results.</p>
+      <form id="form" method="post" action="inscription.php" novalidate>
+        <div class="field"><label for="pn">Your first name</label><input id="pn" name="parent_name" type="text" autocomplete="given-name" required maxlength="80"></div>
+        <div class="field"><label for="em">Your email</label><input id="em" name="email" type="email" autocomplete="email" required maxlength="160"></div>
+        <div class="field"><label for="gr">Your child’s school grade</label>
+          <select id="gr" name="grade" required>
+            <option value="" disabled selected>Choose</option>
+            <option value="1re année">Grade 1</option><option value="2e année">Grade 2</option><option value="3e année">Grade 3</option><option value="4e année">Grade 4</option><option value="5e année">Grade 5</option><option value="6e année">Grade 6</option><option value="Autre">Other</option>
+          </select></div>
+        <div class="hp" aria-hidden="true"><label>Leave empty<input name="site" type="text" tabindex="-1" autocomplete="off"></label></div>
+        <label class="consent" for="co"><input id="co" name="consent" type="checkbox" value="1" required><span>I agree that my first name, email and my child’s school grade may be used to write to me about <span class="lc">Le Cahier</span> and its launch, according to the <a href="#confidentialite">privacy policy</a> below.</span></label>
+        <button class="btn" type="submit">Send</button>
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+        <p class="form-note">No ads. Your details are used only to write to you about <span class="lc">Le Cahier</span>.</p>
+      </form>
+      <p class="already">Already have an account? <a class="btn" href="https://app.lecahier.ca/">Open Le Cahier</a></p>
+    </section>
+
+    <section class="page priv" id="confidentialite" >
+      <details id="priv-det"><summary>Privacy on this site</summary>
+      <p>This policy covers only the lecahier.ca website and its form. The app has its own privacy policy, which you can read before creating an account.</p>
+      <h3>What I collect</h3>
+      <p>Your first name, your email, your child’s school grade and your agreement that I write to you. Nothing else: no child’s name, no school, no results.</p>
+      <h3>Why</h3>
+      <p>Only to write to you about <span class="lc">Le Cahier</span> and its launch. No sale of your information, no newsletter without your separate agreement. Without your consent, this site uses no tracking cookies or advertising pixel.</p>
+      <div id="mesure-info" hidden>
+      <h3>Audience measurement (optional)</h3>
+      <p>Only with your consent, I use the Meta pixel (Facebook and Instagram) to know whether my posts bring people to this site and how many fill in the form. Meta then receives information about your visit: IP address, device and browser, pages viewed, and the fact that the form was submitted. It does not receive your first name, your email or your child’s grade. This information may be processed outside Quebec.</p>
+      <p>You can decline, or change your mind at any time: <button type="button" class="linkbtn" id="mesure-modif">change my choice</button>.</p>
+      </div>
+      <h3>Automated analysis, in the app</h3>
+      <p>To correct a text, read the photo of the plan or explain an exercise differently, the app sends the content, without first name or surname, to an external service that may be located outside Quebec. The details are in the app’s policy.</p>
+      <h3>Who has access</h3>
+      <p>Me, as the person responsible. Messages are received by the site’s host, CanSpace, whose servers are located in Beauharnois (Quebec).</p>
+      <h3>How long</h3>
+      <p>12 months after our last exchange. After that, your details are deleted. You can also ask for their deletion at any time.</p>
+      <h3>Your rights</h3>
+      <p>You can ask to see, correct or delete your information, or withdraw your consent, by writing to <a href="mailto:najm@lecahier.ca">najm@lecahier.ca</a>. Person responsible for the protection of personal information: Najm Jaouadi.</p>
+      <p style="margin-top:18px;color:var(--ink-3);font-size:.9rem">Last updated: October 2026</p>
+      </details>
+    </section>
+
+  </main>
+
+  <footer>
+    <span><span class="lc">Le Cahier</span> · a parent’s project, in Montréal</span>
+    <span><a href="mailto:najm@lecahier.ca">najm@lecahier.ca</a> · <span class="socs" style="display:inline-flex;vertical-align:middle"><a class="soc" href="https://www.instagram.com/lecahier.ca/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="soc" href="https://www.facebook.com/lecahier.ca" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg></a></span> · <a href="#confidentialite">Privacy</a><span id="mesure-lien" hidden> · <button type="button" class="linkbtn" id="mesure-pied">Audience measurement</button></span></span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var f=document.getElementById('form'),s=document.getElementById('status');
+  function say(t,err){s.textContent=t;s.className='status'+(err?' err':'');s.style.display='block'}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!f.checkValidity()){f.reportValidity();return}
+    var b=f.querySelector('button');b.disabled=true;
+    fetch(f.action,{method:'POST',body:new FormData(f)})
+      .then(function(r){return r.json()})
+      .then(function(j){
+        if(j&&j.ok){try{if(window.fbq)fbq('track','Lead')}catch(e){}f.reset();say('Thank you! I’ll write to explain the next steps.')}
+        else{say('Something went wrong. Please try again in a few minutes.',true)}
+      })
+      .catch(function(){say('Something went wrong. Please try again in a few minutes.',true)})
+      .then(function(){b.disabled=false});
+  });
+})();
+</script>
+<script>
+/* Mesure d'audience : pixel Meta, chargé SEULEMENT après accord explicite (Loi 25).
+   Pour l'activer : collez l'identifiant du pixel (suite de chiffres) entre les guillemets.
+   Vide = rien n'est chargé, aucun bandeau n'apparaît. */
+(function(){
+  var PIXEL_ID='';
+  if(!PIXEL_ID)return;
+  var KEY='lc_mesure';
+  function lire(){try{return localStorage.getItem(KEY)}catch(e){return null}}
+  function ecrire(v){try{localStorage.setItem(KEY,v)}catch(e){}}
+  function charger(){
+    if(window.fbq)return;
+    (function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)})(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('set','autoConfig',false,PIXEL_ID);
+    fbq('init',PIXEL_ID);
+    fbq('track','PageView');
+  }
+  var bandeau=null;
+  function fermer(){if(bandeau){bandeau.remove();bandeau=null}}
+  function choisir(v){ecrire(v);fermer();if(v==='oui')charger()}
+  function afficher(){
+    if(bandeau)return;
+    bandeau=document.createElement('div');bandeau.className='cb';bandeau.setAttribute('role','dialog');bandeau.setAttribute('aria-label','Audience measurement');
+    bandeau.innerHTML='<p><strong>Audience measurement.</strong> Avec votre accord, j\u2019utilise le pixel de Meta pour savoir si mes publications mènent des personnes vers ce site. Meta reçoit alors des renseignements sur votre visite (adresse IP, appareil, pages consultées), qui peuvent être traités hors Québec. Refuser ne change rien au site.</p><div class="row"><button type="button" data-v="non">Decline</button><button type="button" data-v="oui">Accept</button></div>';
+    bandeau.addEventListener('click',function(e){var v=e.target&&e.target.getAttribute&&e.target.getAttribute('data-v');if(v)choisir(v)});
+    document.body.appendChild(bandeau);
+  }
+  document.getElementById('mesure-info').hidden=false;
+  document.getElementById('mesure-lien').hidden=false;
+  document.getElementById('mesure-modif').addEventListener('click',afficher);
+  document.getElementById('mesure-pied').addEventListener('click',afficher);
+  var c=lire();
+  if(c==='oui')charger();else if(c===null)afficher();
+})();
+</script>
+<script>
+(function(){var d=document.getElementById('priv-det');if(!d)return;function o(){if(location.hash==='#confidentialite'){d.open=true;d.scrollIntoView()}}
+addEventListener('hashchange',o);addEventListener('load',o);
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href="#confidentialite"]');if(a){d.open=true}});})();
+</script>
+</body>
+</html>

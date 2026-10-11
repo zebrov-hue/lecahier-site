@@ -6,6 +6,8 @@
 <meta name="theme-color" content="#f4f7fc">
 <meta name="description" content="Le Cahier : un entraînement complémentaire pour l’école primaire au Québec.">
 <title>Le Cahier</title>
+<link rel="alternate" hreflang="fr-CA" href="https://lecahier.ca/">
+<link rel="alternate" hreflang="en-CA" href="https://lecahier.ca/en/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -42,7 +44,7 @@ a{color:var(--blue)}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:800 1.4rem var(--display)}
 .brand i{width:30px;height:36px;border:2.5px solid var(--blue);border-radius:6px;position:relative;background:var(--card);flex:none}
 .brand i::before{content:"";position:absolute;left:7px;top:0;bottom:0;width:2px;background:var(--margin)}
-.top nav{display:flex;gap:20px;font-size:.95rem}
+.top nav{display:flex;align-items:center;gap:20px;font-size:.95rem}
 .top nav a{color:var(--ink-2);text-decoration:none}
 .top nav a:hover{color:var(--blue)}
 .top nav a.btn{color:#fff;min-height:42px;padding:6px 16px;font-size:.95rem}
@@ -140,6 +142,12 @@ body.draft .ph{background:var(--warn);color:var(--warn-ink);padding:0 4px;border
 
 footer{padding:10px 0 48px;font-size:.9rem;color:var(--ink-3);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer a{color:var(--ink-3)}
+.top nav a.lang{font-weight:700;letter-spacing:.04em}
+.soc{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--grid);background:var(--card);color:var(--blue);text-decoration:none}
+.soc:hover{border-color:var(--blue)}
+.socs{display:flex;gap:10px;align-items:center}
+.who .socs{margin-top:6px}
+footer .soc{width:36px;height:36px;color:var(--ink-3)}
 
 .week{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:18px}
 .week .step h3{margin-top:0}
@@ -150,6 +158,12 @@ footer a{color:var(--ink-3)}
   .page::before{left:30px}
   .steps,.steps.four,.cols,.cols.two,.week,.how .steps{grid-template-columns:1fr}
   .top nav a:not(.keep){display:none}
+  .top nav{gap:8px}
+  .top .soc{width:34px;height:34px}
+  .top nav a.btn{padding:6px 12px;font-size:.9rem}
+  .brand{font-size:1.1rem;gap:7px;white-space:nowrap}
+  .top nav a.btn{white-space:nowrap}
+  .top .socs{display:none}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
@@ -170,6 +184,8 @@ footer a{color:var(--ink-3)}
       <a href="#fonctionnement">Comment ça marche</a>
       <a href="#donnees">Vos données</a>
       <a href="#qui">Qui suis-je ?</a>
+      <a class="keep lang" href="/en/" hreflang="en" lang="en">EN</a>
+      <span class="socs keep"><a class="soc keep" href="https://www.instagram.com/lecahier.ca/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="soc keep" href="https://www.facebook.com/lecahier.ca" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg></a></span>
       <a class="btn keep" href="https://app.lecahier.ca/">Accéder au Cahier</a>
     </nav>
   </header>
@@ -239,7 +255,7 @@ footer a{color:var(--ink-3)}
       <div class="who">
         <p>Je m’appelle Najm, je suis papa et je vis à Montréal. J’ai créé <span class="lc">Le Cahier</span> pour mon propre enfant : je voulais l’aider à s’entraîner sans que chaque soirée ne devienne une deuxième séance de devoirs. Puis j’ai voulu le partager avec d’autres familles.</p>
         <p>Je le fais évoluer avec les parents qui l’utilisent, et je lis moi-même chaque message. Une question ? <a href="mailto:najm@lecahier.ca">najm@lecahier.ca</a></p>
-        <p>Vous pouvez aussi nous suivre sur <a href="https://www.instagram.com/lecahier.ca/" target="_blank" rel="noopener">Instagram</a> et <a href="https://www.facebook.com/lecahier.ca" target="_blank" rel="noopener">Facebook</a>.</p>
+        <p class="socs"><a class="soc" href="https://www.instagram.com/lecahier.ca/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="soc" href="https://www.facebook.com/lecahier.ca" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg></a><span>Suivez Le Cahier sur Instagram et Facebook.</span></p>
       </div>
     </section>
 
@@ -309,7 +325,7 @@ footer a{color:var(--ink-3)}
 
   <footer>
     <span><span class="lc">Le Cahier</span> · un projet de parent, à Montréal</span>
-    <span><a href="mailto:najm@lecahier.ca">najm@lecahier.ca</a> · <a href="https://www.instagram.com/lecahier.ca/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/lecahier.ca" target="_blank" rel="noopener">Facebook</a> · <a href="#confidentialite">Confidentialité</a><span id="mesure-lien" hidden> · <button type="button" class="linkbtn" id="mesure-pied">Mesure d’audience</button></span></span>
+    <span><a href="mailto:najm@lecahier.ca">najm@lecahier.ca</a> · <span class="socs" style="display:inline-flex;vertical-align:middle"><a class="soc" href="https://www.instagram.com/lecahier.ca/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="soc" href="https://www.facebook.com/lecahier.ca" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg></a></span> · <a href="#confidentialite">Confidentialité</a><span id="mesure-lien" hidden> · <button type="button" class="linkbtn" id="mesure-pied">Mesure d’audience</button></span></span>
   </footer>
 </div>
 
