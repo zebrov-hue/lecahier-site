@@ -142,11 +142,17 @@ body.draft .ph{background:var(--warn);color:var(--warn-ink);padding:0 4px;border
 
 footer{padding:10px 0 48px;font-size:.9rem;color:var(--ink-3);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer a{color:var(--ink-3)}
-.top nav a.lang{font-weight:700;letter-spacing:.04em}
 .soc{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--grid);background:var(--card);color:var(--blue);text-decoration:none}
 .soc:hover{border-color:var(--blue)}
 .socs{display:flex;gap:10px;align-items:center}
 .who .socs{margin-top:6px}
+.top nav a.soc,footer a.soc{background:var(--blue);border-color:var(--blue);color:#fff}
+.top nav a.soc:hover,footer a.soc:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+@media (prefers-color-scheme:dark){.top nav a.soc,footer a.soc,.top nav a.soc:hover,footer a.soc:hover{color:#0f1522}}
+.top nav a{white-space:nowrap}
+@media (max-width:960px){.top nav a:not(.keep){display:none}}
+.top nav a.lang{display:inline-flex;align-items:center;gap:7px;font-weight:700;color:var(--ink);border:1.5px solid var(--grid);border-radius:999px;padding:6px 12px;background:var(--card);letter-spacing:0}
+.top nav a.lang:hover{border-color:var(--blue);color:var(--blue)}
 footer .soc{width:36px;height:36px;color:var(--ink-3)}
 
 .week{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:18px}
@@ -163,6 +169,11 @@ footer .soc{width:36px;height:36px;color:var(--ink-3)}
   .top nav a.btn{padding:6px 12px;font-size:.9rem}
   .brand{font-size:1.1rem;gap:7px;white-space:nowrap}
   .top nav a.btn{white-space:nowrap}
+  .top nav a.lang .lt{display:none}
+  .top{gap:8px}
+  .brand{font-size:1.05rem}
+  .top nav a.btn{padding:6px 10px;font-size:.88rem}
+  .top nav a.lang{padding:7px 10px}
   .top .socs{display:none}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -182,9 +193,8 @@ footer .soc{width:36px;height:36px;color:var(--ink-3)}
     <a class="brand" href="#accueil" aria-label="Le Cahier, home"><i aria-hidden="true"></i>Le Cahier</a>
     <nav aria-label="Main navigation">
       <a href="#fonctionnement">How it works</a>
-      <a href="#donnees">Your data</a>
       <a href="#qui">Who am I?</a>
-      <a class="keep lang" href="/" hreflang="fr" lang="fr">FR</a>
+      <a class="keep lang" href="/" hreflang="fr" lang="fr"><span class="lt">Français</span></a>
       <span class="socs keep"><a class="soc keep" href="https://www.instagram.com/lecahier.ca/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="soc keep" href="https://www.facebook.com/lecahier.ca" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg></a></span>
       <a class="btn keep" href="https://app.lecahier.ca/">Open Le Cahier</a>
     </nav>
