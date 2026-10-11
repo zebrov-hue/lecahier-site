@@ -350,11 +350,11 @@ footer .soc{width:36px;height:36px;color:var(--ink-3)}
     var st='';
     fetch(f.action,{method:'POST',body:new FormData(f)})
       .then(function(r){st='HTTP '+r.status;return r.text()})
-      .then(function(t){var j;try{j=JSON.parse(t)}catch(e){st+=' (not JSON: '+t.replace(/\s+/g,' ').slice(0,60)+')';j=null}
+      .then(function(t){var j;try{j=JSON.parse(t)}catch(e){j=null}
         if(j&&j.ok){try{if(window.fbq)fbq('track','Lead')}catch(e){}f.reset();say('Thank you! I’ll write to explain the next steps.')}
-        else{say('Something went wrong. Please try again in a few minutes. ['+st+']',true)}
+        else{say('Something went wrong. Please try again in a few minutes.',true)}
       })
-      .catch(function(e){say('Something went wrong. Please try again in a few minutes. [network: '+(e&&e.message)+']',true)})
+      .catch(function(e){say('Something went wrong. Please try again in a few minutes.',true)})
       .then(function(){b.disabled=false});
   });
 })();
