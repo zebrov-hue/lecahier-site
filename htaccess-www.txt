@@ -1,0 +1,9 @@
+
+# LC-WWW : une seule adresse pour le site (lecahier.ca redirige vers www.lecahier.ca)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^lecahier\.ca$ [NC]
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
+  RewriteRule ^(.*)$ https://www.lecahier.ca/$1 [R=301,L]
+</IfModule>
+# /LC-WWW
