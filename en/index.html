@@ -30,7 +30,7 @@
   --blue:#7ea6ff;--blue-soft:#1d2a47;--margin:#ef6f63;--warn:#33290f;--warn-ink:#e8b84a;
 }}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{margin:0;font:18px/1.65 var(--body);color:var(--ink);background-color:var(--paper);
   background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
   background-size:32px 32px;-webkit-font-smoothing:antialiased}
@@ -41,6 +41,7 @@ a{color:var(--blue)}
 .top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0 14px}
 .lc{font-family:var(--display);font-weight:800;color:var(--ink);white-space:nowrap}
 .btn .lc,.brand .lc{color:inherit}
+.top{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--paper) 98%,transparent);box-shadow:0 1px 0 var(--grid);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:800 1.4rem var(--display)}
 .brand i{width:30px;height:36px;border:2.5px solid var(--blue);border-radius:6px;position:relative;background:var(--card);flex:none}
 .brand i::before{content:"";position:absolute;left:7px;top:0;bottom:0;width:2px;background:var(--margin)}
