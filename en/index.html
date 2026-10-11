@@ -155,14 +155,20 @@ footer a{color:var(--ink-3)}
 .top nav a.lang:hover{border-color:var(--blue);color:var(--blue)}
 footer .soc{width:36px;height:36px;color:var(--ink-3)}
 
-.week{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:18px}
-.week .step h3{margin-top:0}
+.week{display:grid;margin-top:18px}
+.week{grid-template-columns:1fr;gap:10px}
+.week .step{display:grid;grid-template-columns:130px 1fr;gap:4px 20px;align-items:start;padding:14px 18px}
+.week .step h3{margin:2px 0 0;font-size:1.1rem}
+.week ul{list-style:none;margin:0;padding:0}
+.week li{margin:0 0 8px;font-size:.98rem;color:var(--ink-2);line-height:1.5}
+.week li b{color:var(--blue)}
 .cols.two{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (max-width:720px){
   body{font-size:17px}
   .page{padding:26px 18px 26px 54px}
   .page::before{left:30px}
   .steps,.steps.four,.cols,.cols.two,.week,.how .steps{grid-template-columns:1fr}
+  .week .step{grid-template-columns:1fr}
   .top nav a:not(.keep){display:none}
   .top nav{gap:8px}
   .top .soc{width:34px;height:34px}
@@ -205,7 +211,7 @@ footer .soc{width:36px;height:36px;color:var(--ink-3)}
     <section class="page lined" aria-labelledby="t-accueil">
       <p class="eyebrow">A parent’s project</p>
       <h1 id="t-accueil">Practice at home what your child learns in class.</h1>
-      <p class="lead" style="margin-top:18px">Every day, your child does a short exercise session: math, dictation, reading, writing, science, social studies.</p>
+      <p class="lead" style="margin-top:18px">Every day, your child does a short exercise session in the subjects covered in class, from Grade 1 to Grade 6: French, math, science, social studies.</p>
       <p class="lead">Each week, you show the class work plan. <span class="lc">Le Cahier</span> picks exercises based on what is being taught, the upcoming dictations and tests, then adapts to your child’s answers: what was mastered isn’t repeated, what was missed comes back.</p>
       <div class="actions">
         <a class="btn" href="#inscription">I’d like to try Le Cahier</a>
@@ -217,11 +223,11 @@ footer .soc{width:36px;height:36px;color:var(--ink-3)}
       <h2 id="t-sem">An example week</h2>
       <p>Class plan: math test on Thursday, dictation on Friday. Here is what <span class="lc">Le Cahier</span> prepares.</p>
       <div class="week">
-        <article class="step"><h3>Monday</h3><p>Questions on fractions (test Thursday). Dictation words.</p></article>
-        <article class="step"><h3>Tuesday</h3><p>One full math problem. Dictation words.</p></article>
-        <article class="step"><h3>Wednesday</h3><p>Calculation sheet. Questions on fractions. A concept missed the day before comes back, with its explanation.</p></article>
-        <article class="step"><h3>Thursday</h3><p>Practice dictation. Last questions on fractions.</p></article>
-        <article class="step"><h3>Friday</h3><p>Dictation in class. Short session, a look back at the week.</p></article>
+        <article class="step"><h3>Monday</h3><ul><li><b>Math</b>: questions on fractions (test Thursday)</li><li><b>Dictation</b>: this week’s words</li></ul></article>
+        <article class="step"><h3>Tuesday</h3><ul><li><b>Math</b>: one full problem</li><li><b>Dictation</b>: this week’s words</li></ul></article>
+        <article class="step"><h3>Wednesday</h3><ul><li><b>Math</b>: calculation sheet, questions on fractions</li><li><b>Review</b>: the concept missed yesterday comes back, with its explanation</li></ul></article>
+        <article class="step"><h3>Thursday</h3><ul><li><b>Dictation</b>: practice dictation</li><li><b>Math</b>: last questions on fractions</li></ul></article>
+        <article class="step"><h3>Friday</h3><ul><li><b>Class</b>: dictation in class</li><li><b>Cahier</b>: short session, a look back at the week</li></ul></article>
       </div>
     </section>
 
