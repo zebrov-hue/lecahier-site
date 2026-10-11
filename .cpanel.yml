@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/lecahier/public_html/
+    - /bin/cp index.html favicon.svg favicon.ico favicon-32.png favicon-192.png apple-touch-icon.png $DEPLOYPATH
