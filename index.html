@@ -69,6 +69,9 @@ a{color:var(--blue)}
 @media (prefers-color-scheme:dark){.top nav a.btn,.top nav a.btn:hover{color:#0f1522}}
 .top nav{align-items:center}
 .chips{display:flex;gap:8px 10px;flex-wrap:wrap;margin-top:20px;padding:0;list-style:none}
+.demo{margin:26px 0 6px;text-align:center}
+.demo video{display:block;margin:0 auto;width:100%;max-width:300px;aspect-ratio:9/16;border-radius:20px;background:#f4f8fd;box-shadow:0 10px 30px rgba(27,42,74,.18)}
+.demo figcaption{margin-top:10px;font-size:.92rem;color:var(--ink-2)}
 .page ul.chips{padding-left:0;margin:20px 0 0}
 .page .chips li{margin:0;font-size:.9rem;color:var(--ink-2);background:var(--blue-soft);border-radius:999px;padding:4px 12px}
 .who{display:grid;grid-template-columns:1fr;gap:6px}
@@ -230,6 +233,8 @@ footer .soc{width:36px;height:36px;color:var(--ink-3)}
       <h1 id="t-accueil">Pratiquer à la maison ce que votre enfant apprend en classe.</h1>
       <p class="lead" style="margin-top:18px">Chaque jour, votre enfant fait une courte séance d’exercices dans les matières vues en classe, de la 1re à la 6e année.</p>
       <p class="lead">Chaque semaine, vous montrez le plan de travail de la classe. <span class="lc">Le Cahier</span> choisit les exercices selon ce qui est enseigné, les dictées et les évaluations à venir, puis s’adapte aux réponses de votre enfant : ce qui est réussi n’est pas répété, ce qui est raté revient.</p>
+      <p class="lead"><strong>De vrais exercices, pas un agenda</strong> : voyez à quoi ressemble une séance.</p>
+      <figure class="demo"><video controls playsinline preload="none" poster="/video-fr.jpg" aria-label="Vidéo d’une minute : une séance du Cahier, avec les vrais écrans"><source src="/video-fr.mp4" type="video/mp4"></video><figcaption>Une séance du Cahier en 1 minute.</figcaption></figure>
       <div class="actions">
         <a class="btn" href="#inscription">Je veux essayer Le Cahier</a>
         <a class="btn ghost" href="#semaine">Voir un exemple de semaine</a>

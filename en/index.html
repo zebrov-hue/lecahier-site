@@ -69,6 +69,9 @@ a{color:var(--blue)}
 @media (prefers-color-scheme:dark){.top nav a.btn,.top nav a.btn:hover{color:#0f1522}}
 .top nav{align-items:center}
 .chips{display:flex;gap:8px 10px;flex-wrap:wrap;margin-top:20px;padding:0;list-style:none}
+.demo{margin:26px 0 6px;text-align:center}
+.demo video{display:block;margin:0 auto;width:100%;max-width:300px;aspect-ratio:9/16;border-radius:20px;background:#f4f8fd;box-shadow:0 10px 30px rgba(27,42,74,.18)}
+.demo figcaption{margin-top:10px;font-size:.92rem;color:var(--ink-2)}
 .page ul.chips{padding-left:0;margin:20px 0 0}
 .page .chips li{margin:0;font-size:.9rem;color:var(--ink-2);background:var(--blue-soft);border-radius:999px;padding:4px 12px}
 .who{display:grid;grid-template-columns:1fr;gap:6px}
@@ -230,6 +233,8 @@ footer .soc{width:36px;height:36px;color:var(--ink-3)}
       <h1 id="t-accueil">Practice at home what your child learns in class.</h1>
       <p class="lead" style="margin-top:18px">Every day, your child does a short exercise session in the subjects covered in class, from Grade 1 to Grade 6.</p>
       <p class="lead">Each week, you show the class work plan. <span class="lc">Le Cahier</span> picks exercises based on what is being taught, the upcoming dictations and tests, then adapts to your child’s answers: what was mastered isn’t repeated, what was missed comes back.</p>
+      <p class="lead"><strong>Real exercises, not a planner</strong>: see what a session looks like.</p>
+      <figure class="demo"><video controls playsinline preload="none" poster="/video-en.jpg" aria-label="One-minute video: a Le Cahier session, with the real screens"><source src="/video-en.mp4" type="video/mp4"></video><figcaption>A Le Cahier session in 1 minute.</figcaption></figure>
       <div class="actions">
         <a class="btn" href="#inscription">I’d like to try Le Cahier</a>
         <a class="btn ghost" href="#semaine">See an example week</a>
