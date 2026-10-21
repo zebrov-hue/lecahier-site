@@ -2,7 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/lecahier/public_html/
-    - /bin/cp og-fr.png og-en.png video-fr.mp4 video-en.mp4 video-fr.jpg video-en.jpg $DEPLOYPATH
+    - /bin/cp og-fr.png og-en.png video-fr.mp4 video-en.mp4 video-fr.vtt video-en.vtt video-fr.jpg video-en.jpg $DEPLOYPATH
     - /bin/cp index.html favicon.svg favicon.ico favicon-32.png favicon-192.png apple-touch-icon.png $DEPLOYPATH
     - /bin/mkdir -p $DEPLOYPATH/en
     - /bin/cp en/index.html $DEPLOYPATH/en/
