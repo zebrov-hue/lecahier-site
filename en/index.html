@@ -215,6 +215,7 @@ footer .soc{width:36px;height:36px;color:var(--ink-3)}
 .vids h3{margin:0 0 10px;font-size:1.05rem}
 .vids video{display:block;margin:0 auto;width:100%;max-width:260px;aspect-ratio:9/16;border-radius:20px;background:#f4f8fd;box-shadow:0 10px 30px rgba(27,42,74,.18)}
 .vids figcaption{margin-top:10px;font-size:.92rem;color:var(--ink-2)}
+.vids.feat{grid-template-columns:1fr}.vids.feat video{max-width:300px}.vids.small{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:6px}.vids.small video{max-width:190px}.vids.small h3{font-size:.95rem}
 .more{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:14px}
 .more a{display:block;padding:14px 16px;border:1.5px solid var(--grid);border-radius:14px;background:var(--card);color:var(--ink);font-weight:700;text-decoration:none}
 .more a:hover{border-color:var(--blue);color:var(--blue)}
@@ -247,23 +248,11 @@ footer .soc{width:36px;height:36px;color:var(--ink-3)}
       <p class="lead" style="margin-top:18px">Every school day, your child does a short practice session on the subjects covered in class (Grades 1 to 6).</p>
       <p class="lead">If you wish, you upload the weekly class plan: <span class="lc">Le Cahier</span> then chooses exercises based on what is being taught and on upcoming spelling tests and other tests. In every case, it adapts to your child’s answers: a mistake on a topic covered in class brings it back in later sessions, and what’s mastered comes back less and less often.</p>
       <p class="lead"><strong>We strongly recommend using Le Cahier on a computer or a tablet.</strong></p>
-      <h2 class="vh" style="font-size:1.15rem;margin:26px 0 0">Three short videos</h2>
-      <div class="vids"><figure><h3>Why I built Le Cahier</h3><video controls playsinline preload="none" poster="/video-v1-en.jpg" aria-label="Video : Why I built Le Cahier"><source src="/video-v1-en.mp4" type="video/mp4"></video><figcaption>Where it started, and what Le Cahier adds.</figcaption></figure><figure><h3>The method</h3><video controls playsinline preload="none" poster="/video-v2-en.jpg" aria-label="Video : The method"><source src="/video-v2-en.mp4" type="video/mp4"></video><figcaption>How it works, in practice.</figcaption></figure><figure><h3>In use</h3><video controls playsinline preload="none" poster="/video-v3-en.jpg" aria-label="Video : In use"><source src="/video-v3-en.mp4" type="video/mp4"></video><figcaption>A week with Le Cahier, parent side and child side.</figcaption></figure></div>
+      <div class="vids feat"><figure><h3>What a week looks like</h3><video controls playsinline preload="none" poster="/video-v3-en.jpg" aria-label="Video : What a week looks like"><source src="/video-v3-en.mp4" type="video/mp4"></video><figcaption>A week with Le Cahier, parent side and child side.</figcaption></figure></div>
+      <div class="vids small"><figure><h3>Why I built Le Cahier</h3><video controls playsinline preload="none" poster="/video-v1-en.jpg" aria-label="Video : Why I built Le Cahier"><source src="/video-v1-en.mp4" type="video/mp4"></video><figcaption>Where it started, and what Le Cahier adds.</figcaption></figure><figure><h3>How the training works</h3><video controls playsinline preload="none" poster="/video-v2-en.jpg" aria-label="Video : How the training works"><source src="/video-v2-en.mp4" type="video/mp4"></video><figcaption>How it works, in practice.</figcaption></figure></div>
       <div class="actions">
         <a class="btn" href="#inscription">I’d like to try Le Cahier</a>
         <a class="btn ghost" href="/en/example-week.html">See an example week</a>
-      </div>
-    </section>
-    <section class="page" aria-labelledby="t-more">
-      <h2 id="t-more">Learn more</h2>
-      <div class="more"><a href="/en/how-it-works.html">How it works</a><a href="/en/example-week.html">Example week</a><a href="/en/your-data.html">Your data</a><a href="/en/questions.html">Questions</a></div>
-    </section>
-    <section class="page" id="qui" aria-labelledby="t-qui">
-      <h2 id="t-qui">Who am I?</h2>
-      <div class="who">
-        <p>My name is Najm. I’m a dad, and I live in Montréal. I built <span class="lc">Le Cahier</span> for my own child: I wanted to help them practice without every evening turning into a second homework session. Then I decided to share it with other families.</p>
-        <p>I keep improving it with feedback from the parents who use it, and I read every message myself. Have a question? Write to me at <a href="mailto:najm@lecahier.ca">najm@lecahier.ca</a></p>
-        <p class="socs"><a class="soc" href="https://www.instagram.com/lecahier.ca/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="soc" href="https://www.facebook.com/lecahier.ca" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg></a><span>Follow Le Cahier on Instagram and Facebook.</span></p>
       </div>
     </section>
     <section class="page lined" id="inscription" aria-labelledby="t-insc">
@@ -291,6 +280,18 @@ footer .soc{width:36px;height:36px;color:var(--ink-3)}
         <p class="form-note">No ads. Your details are used only to write to you about <span class="lc">Le Cahier</span>.</p>
       </form>
       <p class="already">Already have an account? <a class="btn" href="https://app.lecahier.ca/">Open Le Cahier</a></p>
+    </section>
+    <section class="page" id="qui" aria-labelledby="t-qui">
+      <h2 id="t-qui">Who am I?</h2>
+      <div class="who">
+        <p>My name is Najm. I’m a dad, and I live in Montréal. I built <span class="lc">Le Cahier</span> for my own child: I wanted to help them practice without every evening turning into a second homework session. Then I decided to share it with other families.</p>
+        <p>I keep improving it with feedback from the parents who use it, and I read every message myself. Have a question? Write to me at <a href="mailto:najm@lecahier.ca">najm@lecahier.ca</a></p>
+        <p class="socs"><a class="soc" href="https://www.instagram.com/lecahier.ca/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="soc" href="https://www.facebook.com/lecahier.ca" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg></a><span>Follow Le Cahier on Instagram and Facebook.</span></p>
+      </div>
+    </section>
+    <section class="page" aria-labelledby="t-more">
+      <h2 id="t-more">Learn more</h2>
+      <div class="more"><a href="/en/how-it-works.html">How it works</a><a href="/en/example-week.html">Example week</a><a href="/en/your-data.html">Your data</a><a href="/en/questions.html">Questions</a></div>
     </section>
     <section class="page priv" id="confidentialite" >
       <details id="priv-det"><summary>Website privacy policy</summary>
