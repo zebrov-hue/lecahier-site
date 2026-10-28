@@ -210,16 +210,31 @@ footer .soc{width:36px;height:36px;color:var(--ink-3)}
 .cb button{flex:1 1 140px;min-height:44px;padding:8px 16px;font:700 .98rem var(--body,inherit);color:var(--blue);background:var(--card);border:2px solid var(--blue);border-radius:10px;cursor:pointer}
 .cb button:hover{background:var(--blue-soft)}
 .linkbtn{background:none;border:0;padding:0;font:inherit;color:var(--blue);text-decoration:underline;cursor:pointer}
+.page h1[id^=t-]{margin-bottom:16px}
+.vids{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px;margin:34px 0 10px}
+.vids figure{margin:0;text-align:center}
+.vids h3{margin:0 0 14px;min-height:2.6em;display:flex;align-items:flex-end;justify-content:center;font-size:1.05rem}
+.vids video{display:block;margin:0 auto;width:100%;max-width:260px;aspect-ratio:9/16;border-radius:20px;background:#f4f8fd;box-shadow:0 10px 30px rgba(27,42,74,.18)}
+.vids figcaption{margin-top:12px;font-size:.92rem;color:var(--ink-2)}
+.vids.feat{grid-template-columns:1fr}.vids.feat video{max-width:300px}.vids.small{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 24px;margin-top:34px;align-items:start}.vids.small video{max-width:190px}.vids.small h3{font-size:.95rem}
+.more{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}
+.more a{display:block;padding:14px 16px;border:1.5px solid var(--grid);border-radius:14px;background:var(--card);color:var(--ink);font-weight:700;text-decoration:none}
+.more a:hover{border-color:var(--blue);color:var(--blue)}
+.fnav{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0 0 10px}
+.fnav a{color:var(--ink-2)}
 </style>
 </head>
 <body>
 
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="#accueil" aria-label="Le Cahier, home"><i aria-hidden="true"></i>Le Cahier</a>
+    <a class="brand" href="/en/" aria-label="Le Cahier, home"><i aria-hidden="true"></i>Le Cahier</a>
     <nav aria-label="Main navigation">
-      <a href="#fonctionnement">How it works</a>
-      <a href="#qui">Who am I?</a>
+      <a href="/en/how-it-works.html">How it works</a>
+      <a href="/en/example-week.html">Example week</a>
+      <a href="/en/your-data.html">Your data</a>
+      <a href="/en/questions.html">Questions</a>
+      <a href="/en/#qui">Who am I?</a>
       <a class="keep lang" href="/" hreflang="fr" lang="fr" aria-label="Français"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" width="26" height="17" aria-hidden="true" style="border-radius:2px;flex:none"><rect width="60" height="40" fill="#003DA5"/><path fill="#fff" d="M26 0h8v40h-8zM0 16h60v8H0z"/><defs><g id="fl" fill="#fff"><path d="M0-6.2C2.4-3.8 2.4.6 0 2.8-2.4.6-2.4-3.8 0-6.2z"/><path d="M-.9 2.2C-2.6-2.6-7-3.2-6.4.6c.2 2 3 2.6 4.8 1.6z"/><path d="M.9 2.2C2.6-2.6 7-3.2 6.4.6c-.2 2-3 2.6-4.8 1.6z"/><rect x="-3.4" y="2.9" width="6.8" height="1.3" rx=".4"/><path d="M-1.6 4.3h3.2l.9 2.2h-5z"/></g></defs><use href="#fl" x="13" y="9"/><use href="#fl" x="47" y="9"/><use href="#fl" x="13" y="33"/><use href="#fl" x="47" y="33"/></svg><span class="lt">Français</span></a>
       <span class="socs keep"><a class="soc keep" href="https://www.instagram.com/lecahier.ca/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="soc keep" href="https://www.facebook.com/lecahier.ca" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg></a></span>
       <a class="btn keep" href="https://app.lecahier.ca/">Open Le Cahier</a>
@@ -234,88 +249,15 @@ footer .soc{width:36px;height:36px;color:var(--ink-3)}
       <p class="lead" style="margin-top:18px">Every school day, your child does a short practice session on the subjects covered in class (Grades 1 to 6).</p>
       <p class="lead">If you wish, you upload the weekly class plan: <span class="lc">Le Cahier</span> then chooses exercises based on what is being taught and on upcoming spelling tests and other tests. In every case, it adapts to your child’s answers: a mistake on a topic covered in class brings it back in later sessions, and what’s mastered comes back less and less often.</p>
       <p class="lead"><strong>We strongly recommend using Le Cahier on a computer or a tablet.</strong></p>
-      <p class="lead"><strong>Real exercises, not a planner.</strong> Here’s what a session looks like.</p>
-      <figure class="demo"><video controls playsinline preload="none" poster="/promo-en.jpg" aria-label="32-second video: why I created Le Cahier and how it follows the class"><source src="/promo-en.mp4" type="video/mp4"><track kind="subtitles" src="/promo-en.vtt" srclang="en" label="English"></video><figcaption>Why Le Cahier, in 32 seconds.</figcaption></figure>
       <div class="actions">
         <a class="btn" href="#inscription">I’d like to try Le Cahier</a>
-        <a class="btn ghost" href="#semaine">See an example week</a>
+        <a class="btn ghost" href="/en/example-week.html">See an example week</a>
       </div>
     </section>
-
-    <section class="page" id="adapte" aria-labelledby="t-adapte">
-      <h2 id="t-adapte">You don’t have to figure out where your child is struggling.</h2>
-      <p>With a worksheet, you check the answers, figure out where your child is stuck and look for an explanation for every mistake. I wanted <span class="lc">Le Cahier</span> to do that work.</p>
-      <p><strong>An example.</strong> A child misplaces 7/10 on a number line. A hint comes first, with a second try; then the solution is explained. In the following sessions, if the concept has been covered in class, it comes back until it has been answered correctly twice, on two different days. After that, it only returns now and then, to check that it has stuck.</p>
-      <p>You can see how your child is doing, subject by subject. There’s nothing for you to set up.</p>
+    <section class="page" aria-label="Three short videos">
+      <div class="vids feat"><figure><h3>What a week looks like</h3><video controls playsinline preload="none" poster="/video-v3-en.jpg" aria-label="Video : What a week looks like"><source src="/video-v3-en.mp4" type="video/mp4"></video><figcaption>A week with Le Cahier, parent side and child side.</figcaption></figure></div>
+      <div class="vids small"><figure><h3>Why I built Le Cahier</h3><video controls playsinline preload="none" poster="/video-v1-en.jpg" aria-label="Video : Why I built Le Cahier"><source src="/video-v1-en.mp4" type="video/mp4"></video><figcaption>Where it started, and what Le Cahier adds.</figcaption></figure><figure><h3>How the training works</h3><video controls playsinline preload="none" poster="/video-v2-en.jpg" aria-label="Video : How the training works"><source src="/video-v2-en.mp4" type="video/mp4"></video><figcaption>How it works, in practice.</figcaption></figure></div>
     </section>
-
-    <section class="page" id="semaine" aria-labelledby="t-sem">
-      <h2 id="t-sem">An example week</h2>
-      <p>Weekly class plan: a math test on Thursday and a spelling test on Friday. Here’s what <span class="lc">Le Cahier</span> prepares.</p>
-      <div class="week">
-        <article class="step"><h3>Monday</h3><ul><li><b>Math</b>: fraction questions (test on Thursday)</li><li><b>Spelling</b>: this week’s words</li></ul></article>
-        <article class="step"><h3>Tuesday</h3><ul><li><b>Math</b>: a full word problem</li><li><b>Spelling</b>: this week’s words</li></ul></article>
-        <article class="step"><h3>Wednesday</h3><ul><li><b>Math</b>: arithmetic drills and a final round of fraction questions</li><li><b>Review</b>: the concept missed on Tuesday comes back, with an explanation</li></ul></article>
-        <article class="step"><h3>Thursday</h3><ul><li><b>Spelling</b>: a practice test on this week’s words</li><li><b>Math</b>: a last round of fraction questions</li></ul></article>
-        <article class="step"><h3>Friday</h3><ul><li><b>In class</b>: spelling test</li><li><b>Le Cahier</b>: a short session reviewing the week</li></ul></article>
-      </div>
-    </section>
-
-    <section class="page" id="fonctionnement" aria-labelledby="t-fonc">
-      <h2 id="t-fonc">How does it work?</h2>
-      <p class="lead"><strong>We strongly recommend using Le Cahier on a computer or a tablet.</strong></p>
-      <div class="steps four">
-        <article class="step"><span class="n">1</span><h3>You create an account</h3><p>All you need is an email address and a password. For your child, just a first name.</p></article>
-        <article class="step"><span class="n">2</span><h3>You can upload the class plan</h3><p>If you have the class plan the school sends you, you can add it; a photo, screenshot or PDF (up to 3 pages) is enough. No plan this week? <span class="lc">Le Cahier</span> still adapts to your child’s answers. Got a marked test back? Add it too: a concept with mistakes counts as seen in class, so it comes back in the sessions.</p></article>
-        <article class="step"><span class="n">3</span><h3>Your child does today’s session</h3><p>One button: “Ma séance du jour” (today’s session). It’s shorter on busy weeks and longer before a test. Spelling words are read aloud. If your child wants more, an extra session is ready. On weekends, a session is offered, never required.</p></article>
-        <article class="step"><span class="n">4</span><h3>You track your child’s progress</h3><p>Each week, at a glance: what <span class="lc">Le Cahier</span> is working on, what’s left to do on paper or in class, and the dates to remember. A first progress overview for each subject is available after about ten days.</p></article>
-      </div>
-      <div class="actions"><a class="btn" href="#inscription">I’d like to try Le Cahier</a></div>
-    </section>
-
-    <section class="page" aria-labelledby="t-diff">
-      <h2 id="t-diff">What sets it apart, and what it isn’t</h2>
-      <div class="cols two">
-        <article class="col"><h3>What sets it apart</h3>
-          <p>Exercises built on the Québec Education Program, the official curriculum of Québec’s Ministère de l’Éducation, then matched to what’s happening in your child’s class: the weekly class plan, spelling tests and other tests.</p>
-          <p>After a mistake: a hint and a second try, then the explanation. If the concept has been covered in class, it then comes back at spaced intervals.</p>
-          <p>No points, no rankings, no streaks to keep up.</p></article>
-        <article class="col"><h3>What it isn’t</h3>
-          <p>A tutor or a replacement for the teacher.</p>
-          <p>A homework planner: these exercises are extra practice, on top of homework.</p>
-          <p>One more app to keep track of: no reminder is sent without your agreement, nothing to follow up on.</p></article>
-      </div>
-    </section>
-
-    <section class="page" id="donnees" aria-labelledby="t-don">
-      <h2 id="t-don">Your data</h2>
-      <p>Only you, the parent, can read your child’s answers, written work, interests and first name. The answers and written work your child writes in <span class="lc">Le Cahier</span> are never sent to an external service. A photo or PDF of a marked test may contain your child’s handwriting; the top of the page is hidden before it is sent.</p>
-      <div class="steps four">
-        <article class="step"><span class="n">1</span><h3>On your device</h3><p>Personal content is encrypted in your browser before it is sent.</p></article>
-        <article class="step"><span class="n">2</span><h3>Stored in Montréal</h3><p>Personal content is encrypted there: I can’t read it. Results by concept (right or wrong), with no text at all, are not encrypted; I do not look at your child’s results.</p></article>
-              </div>
-      <p style="margin-top:16px">No ads. Your data is never sold. The app’s privacy policy explains the details, and you can read it before creating an account.</p>
-    </section>
-
-    <section class="page" id="qui" aria-labelledby="t-qui">
-      <h2 id="t-qui">Who am I?</h2>
-      <div class="who">
-        <p>My name is Najm. I’m a dad, and I live in Montréal. I built <span class="lc">Le Cahier</span> for my own child: I wanted to help them practice without every evening turning into a second homework session. Then I decided to share it with other families.</p>
-        <p>I keep improving it with feedback from the parents who use it, and I read every message myself. Have a question? Write to me at <a href="mailto:najm@lecahier.ca">najm@lecahier.ca</a></p>
-        <p class="socs"><a class="soc" href="https://www.instagram.com/lecahier.ca/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="soc" href="https://www.facebook.com/lecahier.ca" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg></a><span>Follow Le Cahier on Instagram and Facebook.</span></p>
-      </div>
-    </section>
-
-    <section class="page" aria-labelledby="t-faq">
-      <h2 id="t-faq">Your questions</h2>
-      <details><summary>How much time does it take?</summary><p>A session takes up to about 20 minutes. It’s shorter on busy weeks, and some days there’s nothing to do.</p></details>
-      <details><summary>What is the weekly class plan for?</summary><p>It keeps <span class="lc">Le Cahier</span> in step with the class: what’s being taught this week, spelling tests and upcoming tests. If it refers to pages in a common textbook, <span class="lc">Le Cahier</span> works out the concept when it can. Without a plan, <span class="lc">Le Cahier</span> still adapts to your child’s answers, but it won’t know what the class is working on. A concept counts as “covered in class” when it is named in a class plan, when a marked test shows mistakes on it, or when your child gets it right alone on two different days. Until a concept is in one of those cases, a mistake does not bring it back.</p></details>
-      <details><summary>What is a marked test for?</summary><p>It shows what was hard in class. You add a photo or a PDF (1 to 6 pages), and <span class="lc">Le Cahier</span> brings back the concepts where there were mistakes. The top of each page (name, mark) is hidden automatically before it is read, and you can hide other areas. Only the concepts and the date are kept: not the name, the mark or the photo.</p></details>
-      <details><summary>Does it follow the school curriculum?</summary><p>Yes. The exercises are built on the official curriculum of Québec’s Ministère de l’Éducation, and the weekly class plan matches them to your child’s week.</p></details>
-      <details><summary>Can I stop at any time?</summary><p>Yes. You can delete your child’s profile or your account, and all associated data is erased.</p></details>
-      <details><summary>Can I start right away?</summary><p>Yes, as soon as you receive your access link. Leave your contact details and I’ll send it to you, along with the next steps.</p></details>
-    </section>
-
     <section class="page lined" id="inscription" aria-labelledby="t-insc">
       <h2 id="t-insc">Ready to try <span class="lc">Le Cahier</span>?</h2>
       <p>I’m opening <span class="lc">Le Cahier</span> to a small group of families first and refining it with their feedback.</p>
@@ -342,7 +284,18 @@ footer .soc{width:36px;height:36px;color:var(--ink-3)}
       </form>
       <p class="already">Already have an account? <a class="btn" href="https://app.lecahier.ca/">Open Le Cahier</a></p>
     </section>
-
+    <section class="page" id="qui" aria-labelledby="t-qui">
+      <h2 id="t-qui">Who am I?</h2>
+      <div class="who">
+        <p>My name is Najm. I’m a dad, and I live in Montréal. I built <span class="lc">Le Cahier</span> for my own child: I wanted to help them practice without every evening turning into a second homework session. Then I decided to share it with other families.</p>
+        <p>I keep improving it with feedback from the parents who use it, and I read every message myself.<br>Have a question? Write to me at <a href="mailto:najm@lecahier.ca">najm@lecahier.ca</a></p>
+        <p class="socs"><a class="soc" href="https://www.instagram.com/lecahier.ca/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="soc" href="https://www.facebook.com/lecahier.ca" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg></a><span>Follow Le Cahier on Instagram and Facebook.</span></p>
+      </div>
+    </section>
+    <section class="page" aria-labelledby="t-more">
+      <h2 id="t-more">Learn more</h2>
+      <div class="more"><a href="/en/how-it-works.html">How it works</a><a href="/en/example-week.html">Example week</a><a href="/en/your-data.html">Your data</a><a href="/en/questions.html">Questions</a></div>
+    </section>
     <section class="page priv" id="confidentialite" >
       <details id="priv-det"><summary>Website privacy policy</summary>
       <p>This policy covers only the lecahier.ca website and its form. The app has its own privacy policy, which you can read before creating an account.</p>
@@ -366,10 +319,11 @@ footer .soc{width:36px;height:36px;color:var(--ink-3)}
       <p style="margin-top:18px;color:var(--ink-3);font-size:.9rem">Last updated: October 2026</p>
       </details>
     </section>
-
   </main>
+</main>
 
   <footer>
+    <div class="fnav"><a href="/en/how-it-works.html">How it works</a><a href="/en/example-week.html">Example week</a><a href="/en/your-data.html">Your data</a><a href="/en/questions.html">Questions</a></div>
     <span><span class="lc">Le Cahier</span> · a parent’s project, in Montréal</span>
     <span><a href="mailto:najm@lecahier.ca">najm@lecahier.ca</a> · <span class="socs" style="display:inline-flex;vertical-align:middle"><a class="soc" href="https://www.instagram.com/lecahier.ca/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="soc" href="https://www.facebook.com/lecahier.ca" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg></a></span> · <a href="#confidentialite">Privacy</a><span id="mesure-lien" hidden> · <button type="button" class="linkbtn" id="mesure-pied">Audience measurement</button></span></span>
   </footer>
