@@ -3,7 +3,9 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/lecahier/public_html/
     - /bin/cp og-fr.png og-en.png promo-fr.mp4 promo-en.mp4 promo-fr.vtt promo-en.vtt promo-fr.jpg promo-en.jpg $DEPLOYPATH
+    - /bin/cp video-v1-fr.mp4 video-v2-fr.mp4 video-v3-fr.mp4 video-v1-en.mp4 video-v2-en.mp4 video-v3-en.mp4 video-v1-fr.jpg video-v2-fr.jpg video-v3-fr.jpg video-v1-en.jpg video-v2-en.jpg video-v3-en.jpg $DEPLOYPATH
+    - /bin/cp comment-ca-marche.html exemple-de-semaine.html vos-donnees.html questions.html $DEPLOYPATH
     - /bin/cp index.html favicon.svg favicon.ico favicon-32.png favicon-192.png apple-touch-icon.png $DEPLOYPATH
     - /bin/mkdir -p $DEPLOYPATH/en
-    - /bin/cp en/index.html $DEPLOYPATH/en/
+    - /bin/cp en/index.html en/how-it-works.html en/example-week.html en/your-data.html en/questions.html $DEPLOYPATH/en/
     - /bin/sh deploy-cache.sh
