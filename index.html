@@ -210,31 +210,16 @@ footer .soc{width:36px;height:36px;color:var(--ink-3)}
 .cb button{flex:1 1 140px;min-height:44px;padding:8px 16px;font:700 .98rem var(--body,inherit);color:var(--blue);background:var(--card);border:2px solid var(--blue);border-radius:10px;cursor:pointer}
 .cb button:hover{background:var(--blue-soft)}
 .linkbtn{background:none;border:0;padding:0;font:inherit;color:var(--blue);text-decoration:underline;cursor:pointer}
-.page h1[id^=t-]{margin-bottom:16px}
-.vids{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px;margin:34px 0 10px}
-.vids figure{margin:0;text-align:center}
-.vids h3{margin:0 0 14px;min-height:2.6em;display:flex;align-items:flex-end;justify-content:center;font-size:1.05rem}
-.vids video{display:block;margin:0 auto;width:100%;max-width:260px;aspect-ratio:9/16;border-radius:20px;background:#f4f8fd;box-shadow:0 10px 30px rgba(27,42,74,.18)}
-.vids figcaption{margin-top:12px;font-size:.92rem;color:var(--ink-2)}
-.vids.feat{grid-template-columns:1fr}.vids.feat video{max-width:300px}.vids.small{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 24px;margin-top:34px;align-items:start}.vids.small video{max-width:190px}.vids.small h3{font-size:.95rem}
-.more{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}
-.more a{display:block;padding:14px 16px;border:1.5px solid var(--grid);border-radius:14px;background:var(--card);color:var(--ink);font-weight:700;text-decoration:none}
-.more a:hover{border-color:var(--blue);color:var(--blue)}
-.fnav{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0 0 10px}
-.fnav a{color:var(--ink-2)}
 </style>
 </head>
 <body>
 
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="/" aria-label="Le Cahier, accueil"><i aria-hidden="true"></i>Le Cahier</a>
+    <a class="brand" href="#accueil" aria-label="Le Cahier, accueil"><i aria-hidden="true"></i>Le Cahier</a>
     <nav aria-label="Navigation principale">
-      <a href="/comment-ca-marche.html">Comment ça marche</a>
-      <a href="/exemple-de-semaine.html">Exemple de semaine</a>
-      <a href="/vos-donnees.html">Vos données</a>
-      <a href="/questions.html">Questions</a>
-      <a href="/#qui">Qui suis-je ?</a>
+      <a href="#fonctionnement">Comment ça marche</a>
+      <a href="#qui">Qui suis-je ?</a>
       <a class="keep lang" href="/en/" hreflang="en" lang="en" aria-label="English"><svg viewBox="0 0 60 30" width="26" height="13" aria-hidden="true" style="border-radius:2px;flex:none"><clipPath id="ukc"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><path d="M0,0v30h60v-30z" fill="#012169"/><path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0L60,30M60,0L0,30" clip-path="url(#ukc)" stroke="#C8102E" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></svg><span class="lt">English</span></a>
       <span class="socs keep"><a class="soc keep" href="https://www.instagram.com/lecahier.ca/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="soc keep" href="https://www.facebook.com/lecahier.ca" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg></a></span>
       <a class="btn keep" href="https://app.lecahier.ca/">Accéder au Cahier</a>
@@ -249,15 +234,88 @@ footer .soc{width:36px;height:36px;color:var(--ink-3)}
       <p class="lead" style="margin-top:18px">Chaque jour de classe, votre enfant fait une courte séance d’exercices dans les matières vues en classe, de la 1re à la 6e année.</p>
       <p class="lead">Si vous le souhaitez, vous montrez le plan de travail de la classe : <span class="lc">Le Cahier</span> choisit alors les exercices selon ce qui est enseigné, les dictées et les évaluations à venir. Dans tous les cas, il s’adapte aux réponses de votre enfant : une erreur sur une notion vue en classe la fait revenir dans les séances suivantes, et ce qui est acquis revient de moins en moins souvent.</p>
       <p class="lead"><strong>Nous recommandons fortement d’utiliser Le Cahier sur un ordinateur ou une tablette.</strong></p>
+      <p class="lead"><strong>De vrais exercices, pas un agenda</strong> : voyez à quoi ressemble une séance.</p>
+      <figure class="demo"><video controls playsinline preload="none" poster="/promo-fr.jpg" aria-label="Vidéo de 32 secondes : pourquoi j’ai créé Le Cahier et comment il suit la classe"><source src="/promo-fr.mp4" type="video/mp4"><track kind="subtitles" src="/promo-fr.vtt" srclang="fr" label="Français"></video><figcaption>Pourquoi Le Cahier, en 32 secondes.</figcaption></figure>
       <div class="actions">
         <a class="btn" href="#inscription">Je veux essayer Le Cahier</a>
-        <a class="btn ghost" href="/exemple-de-semaine.html">Voir un exemple de semaine</a>
+        <a class="btn ghost" href="#semaine">Voir un exemple de semaine</a>
       </div>
     </section>
-    <section class="page" aria-label="Trois courtes vidéos">
-      <div class="vids feat"><figure><h3>À quoi ressemble une semaine</h3><video controls playsinline preload="none" poster="/video-v3-fr.jpg" aria-label="Vidéo : À quoi ressemble une semaine"><source src="/video-v3-fr.mp4" type="video/mp4"></video><figcaption>Une semaine avec Le Cahier, côté parent et côté enfant.</figcaption></figure></div>
-      <div class="vids small"><figure><h3>Pourquoi j’ai créé Le Cahier</h3><video controls playsinline preload="none" poster="/video-v1-fr.jpg" aria-label="Vidéo : Pourquoi j’ai créé Le Cahier"><source src="/video-v1-fr.mp4" type="video/mp4"></video><figcaption>Le point de départ, et ce que Le Cahier apporte.</figcaption></figure><figure><h3>Comment fonctionne l’entraînement</h3><video controls playsinline preload="none" poster="/video-v2-fr.jpg" aria-label="Vidéo : Comment fonctionne l’entraînement"><source src="/video-v2-fr.mp4" type="video/mp4"></video><figcaption>Comment ça marche, concrètement.</figcaption></figure></div>
+
+    <section class="page" id="adapte" aria-labelledby="t-adapte">
+      <h2 id="t-adapte">Vous n’avez pas à deviner où votre enfant a du mal.</h2>
+      <p>Avec une feuille d’exercices, c’est à vous de corriger, de comprendre où ça coince et de trouver l’explication de chaque erreur. Je voulais que <span class="lc">Le Cahier</span> fasse ce travail.</p>
+      <p><strong>Un exemple.</strong> Un enfant se trompe en plaçant 7/10 sur une droite numérique. Un indice est donné d’abord, avec un second essai ; ensuite, la solution est expliquée. Dans les séances suivantes, si la notion a été vue en classe, elle revient jusqu’à ce qu’elle soit réussie deux fois, sur deux jours différents. Ensuite, elle ne revient que de temps en temps, pour vérifier que ça tient.</p>
+      <p>Vous voyez où en est votre enfant, matière par matière. Vous n’avez rien à régler.</p>
     </section>
+
+    <section class="page" id="semaine" aria-labelledby="t-sem">
+      <h2 id="t-sem">Un exemple de semaine</h2>
+      <p>Plan de la classe de la semaine : évaluation de maths jeudi, dictée vendredi. Voici ce que <span class="lc">Le Cahier</span> prépare.</p>
+      <div class="week">
+        <article class="step"><h3>Lundi</h3><ul><li><b>Maths</b> : questions sur les fractions (évaluation jeudi)</li><li><b>Dictée</b> : mots de la semaine</li></ul></article>
+        <article class="step"><h3>Mardi</h3><ul><li><b>Maths</b> : un problème complet</li><li><b>Dictée</b> : mots de la semaine</li></ul></article>
+        <article class="step"><h3>Mercredi</h3><ul><li><b>Maths</b> : fiche de calcul et dernières questions sur les fractions</li><li><b>Révision</b> : la notion ratée hier revient, avec son explication</li></ul></article>
+        <article class="step"><h3>Jeudi</h3><ul><li><b>Dictée</b> : dictée d’entraînement</li><li><b>Maths</b> : dernières questions sur les fractions</li></ul></article>
+        <article class="step"><h3>Vendredi</h3><ul><li><b>Classe</b> : dictée en classe</li><li><b>Cahier</b> : séance courte, retour sur la semaine</li></ul></article>
+      </div>
+    </section>
+
+    <section class="page" id="fonctionnement" aria-labelledby="t-fonc">
+      <h2 id="t-fonc">Comment cela fonctionne ?</h2>
+      <p class="lead"><strong>Nous recommandons fortement d’utiliser Le Cahier sur un ordinateur ou une tablette.</strong></p>
+      <div class="steps four">
+        <article class="step"><span class="n">1</span><h3>Vous créez le compte</h3><p>Un courriel et un mot de passe. Pour l’enfant, seulement un prénom.</p></article>
+        <article class="step"><span class="n">2</span><h3>Vous pouvez montrer le plan de la classe</h3><p>Si vous avez le plan de travail que l’école vous envoie, vous pouvez l’ajouter : une photo, une capture d’écran ou un PDF (jusqu’à 3 pages) suffit. Pas de plan cette semaine ? <span class="lc">Le Cahier</span> s’adapte quand même aux réponses de votre enfant. Une évaluation corrigée revient ? Ajoutez-la aussi : une notion où il y a eu des erreurs compte comme vue en classe, et elle revient alors dans les séances.</p></article>
+        <article class="step"><span class="n">3</span><h3>Votre enfant fait la séance du jour</h3><p>Un seul bouton : « Ma séance du jour ». Elle est plus courte les semaines chargées, plus longue avant une évaluation. Les mots de dictée sont lus à voix haute. Si votre enfant veut en faire plus, une séance en plus est disponible. La fin de semaine, une séance est proposée, jamais obligatoire.</p></article>
+        <article class="step"><span class="n">4</span><h3>Vous suivez la progression de votre enfant</h3><p>Chaque semaine, en un coup d’œil : ce que <span class="lc">Le Cahier</span> fait travailler, ce qui reste à faire sur papier ou en classe, et les dates à retenir. Un premier portrait par matière apparaît après une dizaine de jours.</p></article>
+      </div>
+      <div class="actions"><a class="btn" href="#inscription">Je veux essayer Le Cahier</a></div>
+    </section>
+
+    <section class="page" aria-labelledby="t-diff">
+      <h2 id="t-diff">Ce qui le distingue, et ce qu’il n’est pas</h2>
+      <div class="cols two">
+        <article class="col"><h3>Ce qui le distingue</h3>
+          <p>Exercices construits à partir du programme officiel du ministère de l’Éducation, puis calés sur la classe de votre enfant : plan de travail, dictées, évaluations.</p>
+          <p>Après une erreur : un indice et un second essai, puis l’explication. Si la notion a été vue en classe, elle revient ensuite à intervalles espacés.</p>
+          <p>Pas de points, pas de classement, pas de série à maintenir.</p></article>
+        <article class="col"><h3>Ce qu’il n’est pas</h3>
+          <p>Un tuteur, ou un remplacement de l’enseignante ou de l’enseignant.</p>
+          <p>Un agenda de devoirs : ce sont des exercices en plus des devoirs.</p>
+          <p>Une application de plus à surveiller : aucun rappel n’est envoyé sans votre accord, rien à relancer.</p></article>
+      </div>
+    </section>
+
+    <section class="page" id="donnees" aria-labelledby="t-don">
+      <h2 id="t-don">Vos données</h2>
+      <p>Seul le parent peut lire les réponses, les textes, les centres d’intérêt et le prénom de votre enfant. Les réponses et les textes que votre enfant écrit dans <span class="lc">Le Cahier</span> ne sont jamais envoyés à un service externe. Une photo ou un PDF d’évaluation corrigée peut contenir l’écriture de votre enfant ; le haut de la page est caché avant l’envoi.</p>
+      <div class="steps four">
+        <article class="step"><span class="n">1</span><h3>Sur votre appareil</h3><p>Le contenu personnel est chiffré dans votre navigateur avant d’être envoyé.</p></article>
+        <article class="step"><span class="n">2</span><h3>Dans la base, à Montréal</h3><p>Les contenus personnels y sont chiffrés : je ne peux pas les lire. Les résultats par notion (juste ou non), sans aucun texte, ne le sont pas ; je ne consulte pas les résultats de votre enfant.</p></article>
+              </div>
+      <p style="margin-top:16px">Pas de publicité, pas de vente de données. La politique de confidentialité de l’appli en donne le détail, et vous pourrez la lire avant de créer un compte.</p>
+    </section>
+
+    <section class="page" id="qui" aria-labelledby="t-qui">
+      <h2 id="t-qui">Qui suis-je ?</h2>
+      <div class="who">
+        <p>Je m’appelle Najm, je suis papa et je vis à Montréal. J’ai créé <span class="lc">Le Cahier</span> pour mon propre enfant : je voulais l’aider à s’entraîner sans que chaque soirée ne devienne une deuxième séance de devoirs. Puis j’ai voulu le partager avec d’autres familles.</p>
+        <p>Je le fais évoluer avec les parents qui l’utilisent, et je lis moi-même chaque message. Une question ? <a href="mailto:najm@lecahier.ca">najm@lecahier.ca</a></p>
+        <p class="socs"><a class="soc" href="https://www.instagram.com/lecahier.ca/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="soc" href="https://www.facebook.com/lecahier.ca" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg></a><span>Suivez Le Cahier sur Instagram et Facebook.</span></p>
+      </div>
+    </section>
+
+    <section class="page" aria-labelledby="t-faq">
+      <h2 id="t-faq">Vos questions</h2>
+      <details><summary>Combien de temps faut-il prévoir ?</summary><p>Une séance est courte : jusqu’à environ 20 minutes. Elle l’est encore plus les semaines chargées, et certains jours il n’y a rien à faire.</p></details>
+      <details><summary>À quoi sert le plan de travail de la classe ?</summary><p>C’est lui qui aligne <span class="lc">Le Cahier</span> sur l’école : ce qui est enseigné cette semaine, les dictées, les évaluations à venir. S’il renvoie à des pages d’un manuel courant, <span class="lc">Le Cahier</span> en déduit la notion quand c’est possible. Sans plan, <span class="lc">Le Cahier</span> fonctionne quand même à partir des réponses de votre enfant, mais il ne sait pas ce que la classe travaille. Une notion compte comme « vue en classe » quand elle est nommée dans un plan de la classe, quand une évaluation corrigée montre des erreurs sur cette notion, ou quand votre enfant la réussit seul sur deux jours différents. Tant qu’une notion n’est dans aucun de ces cas, une erreur ne la fait pas revenir.</p></details>
+      <details><summary>À quoi sert une évaluation corrigée ?</summary><p>Elle montre ce qui a coincé en classe. Vous ajoutez une photo ou un PDF (de 1 à 6 pages), et <span class="lc">Le Cahier</span> fait revoir les notions où il y a eu des erreurs. Le haut de chaque page (nom, note) est caché automatiquement avant la lecture, et vous pouvez cacher d’autres zones. Seules les notions et la date sont gardées : ni le nom, ni la note, ni la photo.</p></details>
+      <details><summary>Est-ce que ça suit le programme de l’école ?</summary><p>Oui. Les exercices sont construits à partir du programme officiel du ministère de l’Éducation, et le plan de la classe les cale sur la semaine de votre enfant.</p></details>
+      <details><summary>Est-ce que je peux arrêter quand je veux ?</summary><p>Oui. Vous pouvez supprimer le cahier de votre enfant ou votre compte, et tout ce qui s’y rattache est effacé.</p></details>
+      <details><summary>Est-ce que je peux commencer tout de suite ?</summary><p>Oui, dès que vous recevez votre lien d’accès. Laissez-moi vos coordonnées : je vous l’envoie avec les prochaines étapes.</p></details>
+    </section>
+
     <section class="page lined" id="inscription" aria-labelledby="t-insc">
       <h2 id="t-insc">Alors, on ouvre <span class="lc">Le Cahier</span> ?</h2>
       <p>J’ouvre <span class="lc">Le Cahier</span> d’abord à un petit nombre de familles, et je l’ajuste avec elles.</p>
@@ -284,18 +342,7 @@ footer .soc{width:36px;height:36px;color:var(--ink-3)}
       </form>
       <p class="already">Vous avez déjà un compte ? <a class="btn" href="https://app.lecahier.ca/">Accéder au Cahier</a></p>
     </section>
-    <section class="page" id="qui" aria-labelledby="t-qui">
-      <h2 id="t-qui">Qui suis-je ?</h2>
-      <div class="who">
-        <p>Je m’appelle Najm, je suis papa et je vis à Montréal. J’ai créé <span class="lc">Le Cahier</span> pour mon propre enfant : je voulais l’aider à s’entraîner sans que chaque soirée ne devienne une deuxième séance de devoirs. Puis j’ai voulu le partager avec d’autres familles.</p>
-        <p>Je le fais évoluer avec les parents qui l’utilisent, et je lis moi-même chaque message.<br>Une question ? <a href="mailto:najm@lecahier.ca">najm@lecahier.ca</a></p>
-        <p class="socs"><a class="soc" href="https://www.instagram.com/lecahier.ca/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="soc" href="https://www.facebook.com/lecahier.ca" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg></a><span>Suivez Le Cahier sur Instagram et Facebook.</span></p>
-      </div>
-    </section>
-    <section class="page" aria-labelledby="t-more">
-      <h2 id="t-more">Pour aller plus loin</h2>
-      <div class="more"><a href="/comment-ca-marche.html">Comment ça marche</a><a href="/exemple-de-semaine.html">Exemple de semaine</a><a href="/vos-donnees.html">Vos données</a><a href="/questions.html">Questions</a></div>
-    </section>
+
     <section class="page priv" id="confidentialite" >
       <details id="priv-det"><summary>Confidentialité de ce site</summary>
       <p>Cette politique concerne seulement le site lecahier.ca et son formulaire. L’application a sa propre politique de confidentialité, que vous pourrez lire avant de créer un compte.</p>
@@ -319,11 +366,10 @@ footer .soc{width:36px;height:36px;color:var(--ink-3)}
       <p style="margin-top:18px;color:var(--ink-3);font-size:.9rem">Dernière mise à jour : octobre 2026</p>
       </details>
     </section>
+
   </main>
-</main>
 
   <footer>
-    <div class="fnav"><a href="/comment-ca-marche.html">Comment ça marche</a><a href="/exemple-de-semaine.html">Exemple de semaine</a><a href="/vos-donnees.html">Vos données</a><a href="/questions.html">Questions</a></div>
     <span><span class="lc">Le Cahier</span> · un projet de parent, à Montréal</span>
     <span><a href="mailto:najm@lecahier.ca">najm@lecahier.ca</a> · <span class="socs" style="display:inline-flex;vertical-align:middle"><a class="soc" href="https://www.instagram.com/lecahier.ca/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a><a class="soc" href="https://www.facebook.com/lecahier.ca" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1z"/></svg></a></span> · <a href="#confidentialite">Confidentialité</a><span id="mesure-lien" hidden> · <button type="button" class="linkbtn" id="mesure-pied">Mesure d’audience</button></span></span>
   </footer>
